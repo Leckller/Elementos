@@ -21,9 +21,9 @@
                 </h1>
                 <div id="divOptions">
                     <nav>
-                        <button><a href="">Como Jogar</a></button>
+                        <button class="btn btn-outline-warning"><a href="">Como Jogar</a></button>
                     </nav>
-                    <button>Dark Mode</button>
+                    <button class="btn btn-outline-warning">Dark Mode</button>
                 </div>
             </div>
         </header>
@@ -37,9 +37,12 @@
                 </aside>
             </div>
             <div id="colunaMain">
+            <div id="error">
+                <h2></h2>
+            </div>
             <form id="divInputs">
                 <label for="">Insira o seu Nome:</label>
-                <input type="text" name="" id="jogadorName">
+                <input placeholder="" type="text" name="" id="jogadorName">
                 <label for="">Escolha a sua Classe:</label>
                 <div id="classes">
                     <label for="agua">Água <input type="radio" name="class" id="agua"></label>
@@ -47,10 +50,17 @@
                     <label for="terra">Terra <input type="radio" name="class" id="terra"></label>
                     <label for="ar">Ar <input type="radio" name="class" id="ar"></label>
                 </div>
-                <label for="play"><button id="playButton" type="submit">Jogar</button></label>
+                <label for="play"><button disabled class="btn btn-outline-secondary" id="playButton" type="submit">Jogar</button></label>
             </form>
             <div id="game">
-
+                <div id="blocoGame">
+                    <div class="gameBlock glass"></div>
+                    <div class="gameBlock">
+                        <button class="btn btn-outline-secondary" id="newGame">New Game</button>
+                        <button class="btn btn-outline-secondary" id="loadGame">Load Game</button>
+                    </div>
+                    <div class="gameBlock glass"></div>
+                </div>
             </div>
 
             <div id="idPerfil">

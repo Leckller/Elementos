@@ -16,6 +16,37 @@ function newInterface () {
   msgBemvindo.innerHTML = `Bem Vindo ${nomeArmazenado}`
 }
 
+function verifyNick () {
+  const nick = document.querySelector('#jogadorName');
+  try {
+    if (nick.value.length < 3) {
+        const erro = document.querySelector('#error');
+        throw new Error('Insira um nick válido');
+      }
+  } catch (error) {
+    alert(error.message);
+    location.reload()
+  }
+}
+
+function novoJogo () {
+  const newGame = document.querySelector('#newGame');
+  newGame.addEventListener('click', (eve) => {
+    const botaoLoad = document.querySelector('#loadGame');
+    botaoLoad.style.display = 'none';
+    eve.target.style.display = 'none';
+  })
+
+}
+
+function jogo () {
+  const blocoGame = document.querySelector('#game');
+  const perfil = document.querySelector('#idPerfil');
+  perfil.style.display = 'initial'
+  blocoGame.style.display = 'initial'
+  novoJogo();
+}
+
 function classe () {
   const ar = document.querySelector('#ar');
   const fogo = document.querySelector('#fogo');
@@ -29,6 +60,7 @@ function classe () {
   } else if (fogo.checked === true) {
     imagem.src = "/personagens/fogo_puto.png"
     classe.innerHTML = 'Classe: Fogo'
+
   } else if (agua.checked === true) {
     imagem.src = "/personagens/agua_puto.png"
     classe.innerHTML = 'Classe: Água'
@@ -38,11 +70,27 @@ function classe () {
   }
 }
 
+const divClasses = document.querySelector('#classes');
+divClasses.addEventListener('click', (eve) => {
+  const botao = document.querySelector('#playButton');
+  if (ar.checked === true) {
+      botao.disabled = false
+    } else if (fogo.checked === true) {
+      botao.disabled = false
+    } else if (agua.checked === true) {
+      botao.disabled = false
+    } else if (terra.checked === true) {
+      botao.disabled = false
+    }
+});
+
 const play = document.querySelector('#playButton')
 play.addEventListener('click', (eve) => {
     eve.preventDefault();
     savePlayer();
     newInterface();
     classe();
+    jogo();
+    verifyNick();
   });
   

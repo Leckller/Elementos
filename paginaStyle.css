@@ -87,11 +87,34 @@ aside {
   padding-left: 10px;
 }
 
-main #game {
+#novaInterface h2 {
+  font-variant: small-caps  ;
+}
+
+#game {
   margin-top: 20px;
   width: 50%;
   height: 50%;
   border: solid black 3px;
+  background-color: rgb(159, 150, 138);
+  display: none;
+}
+
+#blocoGame {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.gameBlock {
+  background-color: aliceblue;
+  border: solid black 3px;
+  flex-grow: 1;
+}
+
+.glass {
+  background-color: rgb(159, 150, 138);
 }
 
 main #idPerfil {
@@ -99,11 +122,13 @@ main #idPerfil {
   margin-bottom: 20px;
   width: 50%;
   height: 50%;
+  background-color: rgb(159, 150, 138);
   border: solid black 3px;
+  display: none;
 }
 
 #idPerfil h2{
-  margin: 5px;
+  margin: 5px
 }
 
 #idPerfil img {
@@ -133,3 +158,5 @@ footer {
   padding-right: 5px;
   padding-left: 5px;
 }
+
+
