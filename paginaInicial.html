@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <title>Elementos</title>
+    <link rel="shortcut icon" href="personagens/amarelo_puto.png" type="image/x-icon">
+    <script defer src="jogo.js"></script>
 </head>
 <body>
     <div id="divMain">
         <header>
             <div id="divHeader">
-                <img src="https://static.wixstatic.com/media/a34086_d07570e421284379b1c7220bce736dd5~mv2.jpg/v1/fill/w_672,h_504,al_c,lg_1,q_80/a34086_d07570e421284379b1c7220bce736dd5~mv2.jpg" alt="">
+                <img src="personagens/amarelo_puto.png" alt="">
                 <h1>
                     Elementos
                 </h1>
@@ -25,9 +27,9 @@
             </div>
         </header>
         <main>
-            <div id="divInputs">
+            <form id="divInputs">
                 <label for="">Insira o seu Nome:</label>
-                <input type="text" name="" id="">
+                <input type="text" name="" id="jogadorName">
                 <label for="">Escolha a sua Classe:</label>
                 <div id="classes">
                     <label for="agua">Água <input type="radio" name="class" id="agua"></label>
@@ -35,14 +37,17 @@
                     <label for="terra">Terra <input type="radio" name="class" id="terra"></label>
                     <label for="ar">Ar <input type="radio" name="class" id="ar"></label>
                 </div>
-                <label for="play"><button type="submit">Jogar</button></label>
+                <label for="play"><button id="playButton" type="submit">Jogar</button></label>
+            </form>
+            <div id="novaInterface">
+                <h2>Bem vindo!</h2>
             </div>
             <div id="game">
                 a
             </div>
 
             <div id="idPerfil">
-
+                <img id="personagem" src="/personagens/amarelo_puto.png" alt="">
             </div>
 
         </main>
