@@ -8,11 +8,21 @@
   height: 1080px;
   background-color: antiquewhite;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#colunaPrincipal {
+  width: 100%;
+  height: 1080px;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 header {
+  margin: 0;
+  padding: 0;
   margin: 20px;
   width: 100%;
   background-color: aliceblue;
@@ -41,12 +51,35 @@ main {
   display: flex;
   width: 100%;
   height: 100%;
+  flex-direction: row;
+  align-items: center;
+}
+
+#colunaMain {
+  display: flex;
+  width: 100%;
+  height: 100%;
   flex-direction: column;
   align-items: center;
 }
 
+#aside {
+  width: 20%;
+  height: 20%;
+  display: none;
+  position: absolute;
+  justify-content: center;
+  background-color: aliceblue;
+  margin-left: 20px;
+}
+
+aside {
+  float: left;
+}
+
 #novaInterface {
   display: none;
+  float: left;
 }
 
 main #game {
