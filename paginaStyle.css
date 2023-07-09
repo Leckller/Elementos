@@ -103,6 +103,7 @@ aside {
 #blocoGame {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
   height: 100%;
 }
@@ -111,10 +112,46 @@ aside {
   background-color: aliceblue;
   border: solid black 3px;
   flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .glass {
   background-color: rgb(159, 150, 138);
+}
+
+.interfacePlayer {
+  display: flex;
+  width: 30%;
+  height: 30%;
+  background-color: black;
+}
+
+.end {
+  align-items: end;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.none {
+  display: none;
+}
+
+.initial {
+  display: initial;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
 }
 
 main #idPerfil {

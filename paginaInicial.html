@@ -28,6 +28,7 @@
             </div>
         </header>
         <main>
+            
             <div id="aside">
                 <aside>
                     <div id="novaInterface">
@@ -40,6 +41,7 @@
             <div id="error">
                 <h2></h2>
             </div>
+
             <form id="divInputs">
                 <label for="">Insira o seu Nome:</label>
                 <input placeholder="" type="text" name="" id="jogadorName">
@@ -52,12 +54,23 @@
                 </div>
                 <label for="play"><button disabled class="btn btn-outline-secondary" id="playButton" type="submit">Jogar</button></label>
             </form>
+
             <div id="game">
                 <div id="blocoGame">
                     <div class="gameBlock glass"></div>
                     <div class="gameBlock">
-                        <button class="btn btn-outline-secondary" id="newGame">New Game</button>
-                        <button class="btn btn-outline-secondary" id="loadGame">Load Game</button>
+                        <div class="column">
+                            <button class="btn btn-outline-secondary" id="newGame">New Game</button>
+                            <button class="btn btn-outline-secondary" id="loadGame">Load Game</button>
+                            <div class="row">
+                        </div>
+                        <div id="interfaceBox" class="none">
+                            <div class="interfacePlayer">
+                                <button class="grow">ataque</button>
+                                <button class="grow">cura</button>
+                            </div>
+                        </div>
+                        </div>
                     </div>
                     <div class="gameBlock glass"></div>
                 </div>

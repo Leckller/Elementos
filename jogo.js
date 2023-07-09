@@ -29,6 +29,30 @@ function verifyNick () {
   }
 }
 
+function interfaceDeJogo () {
+  const localGame = document.querySelector('#blocoGame');
+  const Ataque = document.createElement('button');
+  const BuffElementar = document.createElement('button');
+  const verifyClass = document.querySelector('#classInterface').classList;
+  if (verifyClass === ar) {
+    Ataque.classList.add = "ar"
+    BuffElementar.classList.add = "ar"
+  } else if (verifyClass === fogo) {
+    Ataque.classList.add = "fogo"
+    BuffElementar.classList.add = "fogo"
+  } else if (verifyClass === terra) {
+    Ataque.classList.add = "terra"
+    BuffElementar.classList.add = "terra"
+  } else if (verifyClass === agua) {
+    Ataque.classList.add = "agua"
+    BuffElementar.classList.add = "agua"
+  }
+  Ataque.innerText = 'Ataque';
+  BuffElementar.innerText = 'Buff Elementar';
+  localGame.appendChild(Ataque)
+  localGame.appendChild(BuffElementar)
+}
+
 function geradorDeMundos (level) {
   if(level === undefined) {
     throw new Error('Erro no código, será resolvido em algumas horas.')
@@ -45,6 +69,7 @@ function geradorDeMundos (level) {
   iniciante.id = 'levelZero'
   iniciante.addEventListener('click', (eve) => {
     iniciante.style.display = 'none'
+    interfaceDeJogo()
   })
   divDoJogo.appendChild(iniciante);
   if (nivel > 1) {
@@ -63,7 +88,7 @@ function novoJogo () {
     const botaoLoad = document.querySelector('#loadGame');
     botaoLoad.style.display = 'none';
     eve.target.style.display = 'none';
-    geradorDeMundos(1);
+    geradorDeMundos(1); 
   })
 }
 
@@ -85,16 +110,19 @@ function classe () {
   if (ar.checked === true) {
     imagem.src = "/personagens/ar_puto.png"
     classe.innerHTML = 'Classe: Ar'
+    classe.className = 'ar'
   } else if (fogo.checked === true) {
     imagem.src = "/personagens/fogo_puto.png"
     classe.innerHTML = 'Classe: Fogo'
-
+    classe.className = 'fogo'
   } else if (agua.checked === true) {
     imagem.src = "/personagens/agua_puto.png"
     classe.innerHTML = 'Classe: Água'
+    classe.className = 'agua'
   } else if (terra.checked === true) {
     imagem.src = "/personagens/terra_puto.png"
     classe.innerHTML = 'Classe: Terra'
+    classe.className = 'terra'
   }
 }
 
