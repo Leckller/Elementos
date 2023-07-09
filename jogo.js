@@ -29,14 +29,38 @@ function verifyNick () {
   }
 }
 
+function geradorDeMundos (level) {
+  if(level === undefined) {
+    throw new Error('Erro no código, será resolvido em algumas horas.')
+  }
+  const divDoJogo = document.querySelector('#blocoGame');
+  const nivel = level;
+  const iniciante = document.createElement('button');
+  const apagaDiv = document.querySelectorAll('.gameBlock');
+  for (let i = 0; i < apagaDiv.length; i += 1) {
+    divDoJogo.removeChild(apagaDiv[i]);
+  }
+  iniciante.innerText = 'level 0'
+  iniciante.className = 'btn btn-outline-secondary'
+  divDoJogo.appendChild(iniciante);
+  if (nivel > 1) {
+    for (let i = 1; i < nivel; i += 1) {
+      const elemento = document.createElement('button');
+      elemento.innerText = `Level ${i}`
+      elemento.className = 'btn btn-outline-secondary'
+      divDoJogo.appendChild(elemento);
+    }
+  }
+}
+
 function novoJogo () {
   const newGame = document.querySelector('#newGame');
   newGame.addEventListener('click', (eve) => {
     const botaoLoad = document.querySelector('#loadGame');
     botaoLoad.style.display = 'none';
     eve.target.style.display = 'none';
+    geradorDeMundos(3);
   })
-
 }
 
 function jogo () {
