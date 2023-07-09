@@ -22,14 +22,19 @@ function classe () {
   const agua = document.querySelector('#agua');
   const terra  = document.querySelector('#terra');
   const imagem = document.querySelector('#personagem');
+  const classe = document.querySelector('#classInterface');
   if (ar.checked === true) {
     imagem.src = "/personagens/ar_puto.png"
+    classe.innerHTML = 'Classe: Ar'
   } else if (fogo.checked === true) {
     imagem.src = "/personagens/fogo_puto.png"
+    classe.innerHTML = 'Classe: Fogo'
   } else if (agua.checked === true) {
     imagem.src = "/personagens/agua_puto.png"
+    classe.innerHTML = 'Classe: Água'
   } else if (terra.checked === true) {
     imagem.src = "/personagens/terra_puto.png"
+    classe.innerHTML = 'Classe: Terra'
   }
 }
 
