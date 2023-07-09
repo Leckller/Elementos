@@ -42,6 +42,10 @@ function geradorDeMundos (level) {
   }
   iniciante.innerText = 'level 0'
   iniciante.className = 'btn btn-outline-secondary'
+  iniciante.id = 'levelZero'
+  iniciante.addEventListener('click', (eve) => {
+    iniciante.style.display = 'none'
+  })
   divDoJogo.appendChild(iniciante);
   if (nivel > 1) {
     for (let i = 1; i < nivel; i += 1) {
@@ -59,7 +63,7 @@ function novoJogo () {
     const botaoLoad = document.querySelector('#loadGame');
     botaoLoad.style.display = 'none';
     eve.target.style.display = 'none';
-    geradorDeMundos(3);
+    geradorDeMundos(1);
   })
 }
 
